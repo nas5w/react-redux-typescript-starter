@@ -15,6 +15,5 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src", "typings"],
-  "paths": { "redux-thunk": ["typings"] }
+  "include": ["src"]
 }

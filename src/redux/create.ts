@@ -1,7 +1,6 @@
 import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import widgetReducer, { WidgetAction } from "./modules/widgets";
-import { StateType } from "typesafe-actions";
 
 const rootReducer = combineReducers({
   widgets: widgetReducer
@@ -17,5 +16,5 @@ export const store = createStore(
 );
 
 export type RootAction = WidgetAction;
-export type Store = StateType<typeof store>;
-export type RootState = StateType<ReturnType<typeof rootReducer>>;
+export type Store = typeof store;
+export type RootState = ReturnType<typeof rootReducer>;
