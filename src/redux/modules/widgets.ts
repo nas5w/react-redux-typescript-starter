@@ -1,5 +1,6 @@
-import { action, Action } from "typesafe-actions";
+import { action } from "typesafe-actions";
 import { Dispatch } from "react";
+import { RootAction } from "../create";
 
 // Actions
 enum WidgetActionType {
@@ -10,7 +11,7 @@ enum WidgetActionType {
 }
 
 export const startWidgetLoad = () => {
-  return (dispatch: Dispatch<Action>): Promise<void> =>
+  return (dispatch: Dispatch<RootAction>) =>
     new Promise(() => {
       setTimeout(() => {
         dispatch(loadWidgets());
